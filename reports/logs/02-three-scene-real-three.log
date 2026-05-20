@@ -1,0 +1,116 @@
+repo=exp-three-webgpu-core
+scenario=Three Scene / Real three.js
+url_search=?mode=real-three
+captured_at=2026-05-20T15:46:10.810Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=three-webgpu-scene-readiness
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/02-three-scene-real-three.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "exp-three-webgpu-core",
+    "commit": "b1120f1",
+    "timestamp": "2026-05-20T15:46:09.136Z",
+    "owner": "ai-webgpu-lab",
+    "track": "graphics",
+    "scenario": "three-webgpu-scene-readiness",
+    "notes": "nodeCount=24; samples=96; backend=webgpu; fallback=false; realAdapter=fallback(renderer.renderAsync is not a function); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:46:10.810Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "02-three-scene-real-three",
+    "capture_url_search": "?mode=real-three"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "graphics",
+    "name": "three-scene-readiness",
+    "input_profile": "24-nodes-orbit-camera",
+    "model_id": "three-webgpu-core-readiness",
+    "resolution": "960x540"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 2435.8,
+      "init_ms": 26.2,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "graphics": {
+      "avg_fps": 60.35,
+      "p95_frametime_ms": 17,
+      "scene_load_ms": 26.2,
+      "resolution_scale": 1,
+      "visual_artifact_note": "synthetic three-style orbit scene"
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/02-three-scene-real-three.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-three-webgpu-core/",
+    "renderer_adapter": {
+      "id": "three-webgpu-01600",
+      "label": "three.js 0.160.0 WebGPURenderer",
+      "status": "connected",
+      "isReal": true,
+      "version": "0.160.0",
+      "capabilities": [
+        "scene-load",
+        "frame-pace",
+        "fallback-record",
+        "real-render"
+      ],
+      "backendHint": "webgpu",
+      "message": "Real renderer adapter 'three-webgpu-01600' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/02-three-scene-real-three.png"
+    ]
+  }
+}
